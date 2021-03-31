@@ -1,0 +1,49 @@
+// setting box sizing so that borders sit inside squares rather than the edge as default
+* {box-sizing: border-box;
+}
+.container { 
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows:repeat(6, 1fr);
+  z-index: -1;
+  div.funkySquare {
+    // background-color: lemonchiffon;
+    border: 1px solid black;
+    min-height: (100vh / 6);
+    min-width: (100vw / 10) ;
+    z-index: 1;
+    
+  }
+}
+.red {
+  background-color: red;
+}
+.white {
+  background-color: white;
+}
+.blue {
+  background-color: blue;
+}
+.yellow {
+  background-color: yellow;
+}
+.verticalDivider{
+  background-color: white;
+  border-bottom: 1.5px solid black;
+  height: 50%;
+  pointer-events: none; 
+  width: 100%;
+  z-index: 2;
+}
+.horizontalDivider{
+  background-color: white;
+  border-right: 1.5px solid black;
+  height: 100%;
+  pointer-events: none; 
+  width: 50%;
+  z-index: 2;
+}
+// The below class would mirror each square so that the two rectangles appear to swap. Didn't quite get to this in time
+// .mirror{
+// transform: rotate(180deg);
+// }
