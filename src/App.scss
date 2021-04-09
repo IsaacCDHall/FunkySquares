@@ -11,7 +11,9 @@
     border: 1px solid black;
     min-height: (100vh / 6);
     min-width: (100vw / 10) ;
-    z-index: 1;
+    // z-index: 1;
+    display: flex;
+    
     
   }
 }
@@ -28,22 +30,25 @@
   background-color: yellow;
 }
 .verticalDivider{
+  width: 50%;
+  height:100%;
   background-color: white;
-  border-bottom: 1.5px solid black;
-  height: 50%;
-  pointer-events: none; 
-  width: 100%;
-  z-index: 2;
+  // z-index: 2;
+  pointer-events: none;
+  border-right: 2px solid black;
 }
 .horizontalDivider{
+   width: 100%;
+  height:50%;
   background-color: white;
-  border-right: 1.5px solid black;
-  height: 100%;
-  pointer-events: none; 
-  width: 50%;
-  z-index: 2;
+  // z-index: 2;
+  pointer-events: none;
+  border-bottom: 2px solid black;
 }
 // The below class would mirror each square so that the two rectangles appear to swap. Didn't quite get to this in time
-// .mirror{
-// transform: rotate(180deg);
+.rotate{
+    transform: rotate(180deg);
+}
+// .rotateBack{
+//     transform: rotate(180deg);
 // }

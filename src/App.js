@@ -1,6 +1,15 @@
 import './App.scss';
+import { useState, useEffect } from 'react';
 
 function App() {
+
+
+// TODOn't induce seizures
+// const [rotationState, setRotation] = useState(false);
+// useEffect(() => {
+//   setRotation(!rotationState)
+// }, [rotationState])
+
  const colors = [
     "red",
     "white",
@@ -19,8 +28,7 @@ function App() {
     for(let i = 0; i<60; i++){
       squares.push(
         <div onClick={(e)=>{
-          // randomizes color when clicking instead from 4 choices
-          e.target.className = `funkySquare ${colors[getRandomInt(4)]}`;
+          e.target.className = `funkySquare ${colors[getRandomInt(4)]} ${(getRandomInt(2) === 0)? "rotate" : console.log("rotation fail")}`;
         }} className={`funkySquare ${colors[getRandomInt(4)]}`} key={i}>
           {/* randomizes original layout on render aka every refresh looks different */}
           <div className={`${dividers[getRandomInt(2)]}`}></div>
